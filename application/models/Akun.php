@@ -4,12 +4,14 @@ class Akun extends CI_Model
 
     private $username;
     private $password;
+    private $is_loggedin;
 
     function __construct()
     {
         parent::__construct();
         $this->username="";
         $this->password="";
+        $this->is_loggedin="";
      
     }
 
@@ -30,6 +32,15 @@ class Akun extends CI_Model
     public function setPassword($password){
 
         $this->password = $password;
+    }
+
+    public function getIsLoggedIn(){
+        return $this->is_loggedin;
+    }
+    
+    public function setIsLoggedIn($is_loggedin){
+
+        $this->is_loggedin = $is_loggedin;
     }
     
 }   
